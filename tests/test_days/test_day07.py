@@ -44,7 +44,3 @@ def test_solve():
     solutions = solve(EXAMPLE_INPUT)
     assert len(solutions) == 2
     assert all(s is not None for s in solutions)
-
-
-1289579105366
-92148721834692
