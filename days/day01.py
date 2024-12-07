@@ -1,12 +1,6 @@
 from collections import Counter
 
 
-"""
---- Day 1: Historian Hysteria ---
-There's just one problem: by holding the two lists up side by side (your puzzle input), it quickly becomes clear that the lists aren't very similar. Maybe you can help The Historians reconcile their lists?
-"""
-
-
 def parse(puzzle_input: str) -> any:
     """Parse the puzzle input."""
     list_1, list_2 = [], []
