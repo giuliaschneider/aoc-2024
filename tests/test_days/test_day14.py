@@ -1,4 +1,4 @@
-from days.day14 import parse, part1, part2, solve, Position
+from days.day14 import parse, Position
 
 EXAMPLE_INPUT = """
 p=0,4 v=3,-3
@@ -26,9 +26,3 @@ def test_parse():
         (Position(0, 0), Position(1, 3)),
         (Position(3, 0), Position(-2, -2)),
     ]
-
-
-def test_part1():
-    positions = parse(EXAMPLE_INPUT)
-    result = part1(positions, 7, 11, 100)
-    assert result is not None

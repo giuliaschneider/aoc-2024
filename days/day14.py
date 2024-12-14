@@ -29,17 +29,20 @@ class Grid:
 def robot_move(grid: Grid, pos: Position, vel: Position):
     pos += vel
 
+    new_x = pos.x
+    new_y = pos.y
+
     if pos.x < 0:
-        pos.x = grid.width + pos.x
+        new_x = grid.width + pos.x
     if pos.x >= grid.width:
-        pos.x = pos.x - grid.width
+        new_x = pos.x - grid.width
 
     if pos.y < 0:
-        pos.y = grid.height + pos.y
+        new_y= grid.height + pos.y
     if pos.y >= grid.height:
-        pos.y = pos.y - grid.height
+        new_y = pos.y - grid.height
 
-    return pos
+    return Position(new_x, new_y)
 
 
 def create_numpy_grid(width, height, positions):

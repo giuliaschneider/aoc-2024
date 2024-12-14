@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
 
-@dataclass()
+@dataclass(frozen=True)
 class Position:
     """Represents a 2D position with vector operations."""
 
