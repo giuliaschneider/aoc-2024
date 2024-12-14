@@ -38,7 +38,7 @@ def robot_move(grid: Grid, pos: Position, vel: Position):
         new_x = pos.x - grid.width
 
     if pos.y < 0:
-        new_y= grid.height + pos.y
+        new_y = grid.height + pos.y
     if pos.y >= grid.height:
         new_y = pos.y - grid.height
 

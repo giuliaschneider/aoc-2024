@@ -1,8 +1,8 @@
 from collections import deque
-from dataclasses import dataclass
 from collections import defaultdict
 
 from utils.grid import Position
+
 
 class Grid:
     UP = Position(-1, 0)
