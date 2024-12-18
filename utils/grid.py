@@ -16,3 +16,7 @@ class Position:
 
     def __mul__(self, scalar):
         return Position(self.x * scalar, self.y * scalar)
+
+    def __lt__(self, other):
+        # Required for heapq
+        return False
