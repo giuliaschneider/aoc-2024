@@ -92,9 +92,7 @@ def part2(grid_length, obstacles, num_obstacles) -> str:
     """Solve part 2."""
 
     grid = Grid(grid_length, grid_length, obstacles[:num_obstacles])
-    _, path = astart(
-        grid, Position(0, 0), Position(grid_length - 1, grid_length - 1)
-    )
+    _, path = astart(grid, Position(0, 0), Position(grid_length - 1, grid_length - 1))
 
     for i in range(num_obstacles + 1, len(obstacles)):
         print(i)
