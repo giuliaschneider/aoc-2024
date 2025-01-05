@@ -25,26 +25,26 @@ def parse(puzzle_input: str) -> any:
     return obstacles, start, end, width, height
 
 
-def get_cheat_canditates(path, max_distance=2):
+def get_cheat_canditates(path, max_distance=2, min_save=100):
     candidates = defaultdict(int)
     for i, next_index in combinations(range(len(path)), 2):
         diff = path[next_index] - path[i]
         distance = abs(diff.x) + abs(diff.y)
         save = (next_index - i) - distance
-        if (distance) <= max_distance and save >= 100:
+        if (distance) <= max_distance and save >= min_save:
             candidates[save] += 1
     return candidates
 
 
-def part1(path) -> int:
+def part1(path, min_save=100) -> int:
     """Solve part 1."""
-    canditates = get_cheat_canditates(path)
+    canditates = get_cheat_canditates(path, min_save=min_save)
     return sum(value for key, value in canditates.items())
 
 
-def part2(path) -> int:
+def part2(path, min_save=100) -> int:
     """Solve part 2."""
-    canditates = get_cheat_canditates(path, 20)
+    canditates = get_cheat_canditates(path, 20, min_save=min_save)
     return sum(value for key, value in canditates.items())
 
 
