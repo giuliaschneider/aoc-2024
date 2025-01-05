@@ -85,7 +85,6 @@ def part2(memeory_space, free, files) -> int:
                 free_list.remove((index, free_space))
                 break
 
-
         if file_index <= index:
             continue
 
