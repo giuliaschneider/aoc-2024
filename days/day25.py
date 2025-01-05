@@ -57,7 +57,6 @@ def part1(locks, keys) -> int:
     return total
 
 
-
 def solve(puzzle_input: str) -> tuple[int, int]:
     """Solve the puzzle for the given input."""
     locks, keys = parse(puzzle_input)
